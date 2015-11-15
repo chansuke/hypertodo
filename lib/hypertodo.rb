@@ -1,4 +1,5 @@
 require "hypertodo/command"
+require "hypertodo/db"
 require "hypertodo/version"
 
 module Hypertodo
