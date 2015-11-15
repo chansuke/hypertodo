@@ -1,7 +1,7 @@
 # coding: utf-8
 
-require 'active_record'
 require 'fileutils'
+require 'active_record'
 
 module HyperTodo
 
@@ -28,7 +28,7 @@ module HyperTodo
       connection.create_table :tasks do |t|
         t.column :name,    :string,  null: false
         t.column :content, :text,    null: false
-        t.column :status,  :integer, detault: 0, null: false
+        t.column :status,  :integer, default: 0, null: false
         t.timestamps
       end
       connection.add_index :tasks, :status
