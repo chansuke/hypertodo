@@ -1,3 +1,4 @@
+require "hypertodo/command"
 require "hypertodo/version"
 
 module Hypertodo
