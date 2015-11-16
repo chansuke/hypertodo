@@ -34,7 +34,7 @@ module HyperTodo
         end
       end
 
-      def self.create_sub_command_parsers
+      def self.create_command_parser
         OptionParser.new do |opt|
           opt.on_head('-v', '--version', 'Show program version') do |v|
             opt.version = Todo::VERSION
