@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["chansuke"]
   spec.email         = ["moonset20@gmail.com"]
 
-  spec.summary       = %q{Hyper TODO management tool}
+  spec.summary       = %q{Hyper task management tool}
   spec.description   = %q{To accelerate one's productivity}
   spec.homepage      = "https://github.com/chansuke/hypertodo"
   spec.license       = "MIT"
