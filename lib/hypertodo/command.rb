@@ -35,6 +35,7 @@ module Hypertodo
     end
 
     def create_task(name, content)
+      # タスク作成時のstatusはデフォルト値が使われNOT_YETとなる
       Task.create!(name: name, content: content).reload
     end
 
@@ -77,14 +78,14 @@ module Hypertodo
       end
     end
 
-    def display_format(id, content, status)
+    def display_format(id, name, content, status)
       name_length    = 20 - full_width_count(name)
-      content_length = 40 - full_width_count(content)
-      [id.to_s.rjust(4), name.ljust(20), content,ljust(38), status.ljust(8)].join(' | ')
+      content_length = 38 - full_width_count(content)
+      [id.to_s.rjust(4), name.ljust(name_length), content.ljust(content_length), status.ljust(8)].join(' | ')
     end
 
     def full_width_count(string)
-      string.each_char.select{|char| !(/[ -~.-゜]/.match(char)) }.count
+      string.each_char.select{ |char| !(/[ -~｡-ﾟ]/.match(char)) }.count
     end
   end
 
