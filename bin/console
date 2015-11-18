@@ -1,9 +1,0 @@
-#!/usr/bin/env ruby
-
-require "bundler/setup"
-require "hypertodo"
-
-require "pry"
-Pry.start
-
-Todo::Command.run(ARGV)
